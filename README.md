@@ -95,7 +95,7 @@ chatbot_project/
 ├── manage.py                   # Django management script
 ├── requirements.txt            # Project dependencies
 └── README.md                   #this file
-|__sample.txt                   # Text file
+                  # Text file
 ```
 
 ## Contributing
