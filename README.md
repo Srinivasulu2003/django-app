@@ -67,10 +67,10 @@ This project is a Django-based chatbot application that uses a Retrieval-Augment
 1. **Send a Query**: Type your query in the input field and press "Send" to get a response based on the static text data or uploaded PDF content.
 
 2. **Upload a PDF**: Use the file input to upload a PDF. The chatbot will extract the text and use it to answer your queries.
+## chatbot image
 
-## Directory Structure
 ![image](https://github.com/user-attachments/assets/0264e32d-a428-401b-a4f7-67ee9f42ea02)
-
+## Directory Structure
 ```
 chatbot_project/
 │
