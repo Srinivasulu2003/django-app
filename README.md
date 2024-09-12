@@ -80,11 +80,11 @@ chatbot_project/
 │   ├── apps.py
 │   ├── models.py
 │   ├── tests.py
-│   ├── views.py
+│   ├── views.py               #langchain and cohere code 
 │   ├── urls.py
 │   └── templates/
 │       └── chatbot/
-│           └── index.html
+│           └── index.html      #chatbot interface
 │
 ├── chatbot_project/            # Django project configuration
 │   ├── __init__.py
