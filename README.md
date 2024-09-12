@@ -26,8 +26,7 @@ This project is a Django-based chatbot application that uses a Retrieval-Augment
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/chatbot_project.git
-   cd chatbot_project
+   git clone https://github.com/Srinivasulu2003/django-app.git
    ```
 
 2. **Create and activate a virtual environment**:
@@ -43,14 +42,7 @@ This project is a Django-based chatbot application that uses a Retrieval-Augment
    pip install -r requirements.txt
    ```
 
-4. **Configure API keys**:
 
-   Set up your environment variables for the Cohere API key and HuggingFace token. You can add these to your `.env` file or set them directly in your environment:
-
-   ```bash
-   export COHERE_API_KEY='your_cohere_api_key'
-   export HF_TOKEN='your_huggingface_token'
-   ```
 
 ## Usage
 
