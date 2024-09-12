@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Chatbot</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .chat-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .message-box {
+            display: flex;
+            align-items: center;
+        }
+        .message-input {
+            flex: 1;
+        }
+        .message {
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            max-width: 80%;
+        }
+        .user-message {
+            background-color: #d1ecf1;
+            align-self: flex-end;
+        }
+        .bot-message {
+            background-color: #e2e3e5;
+            align-self: flex-start;
+        }
+        .messages-container {
+            height: 300px;
+            overflow-y: auto;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function sendMessage() {
+            const messageInput = document.getElementById('message');
+            const message = messageInput.value;
+            if (!message.trim()) return; // Ignore empty messages
+
+            // Add user message to chat
+            const messagesContainer = document.getElementById('messages');
+            const userMessage = document.createElement('div');
+            userMessage.className = 'message user-message';
+            userMessage.innerText = message;
+            messagesContainer.appendChild(userMessage);
+
+            // Clear input field
+            messageInput.value = '';
+            messageInput.focus();
+
+            // Send the message to the server and get the response
+            fetch(`/chatbot/chat/?message=${message}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Add bot response to chat
+                    const botMessage = document.createElement('div');
+                    botMessage.className = 'message bot-message';
+                    botMessage.innerText = data.response;
+                    messagesContainer.appendChild(botMessage);
+
+                    // Scroll to the bottom of the messages container
+                    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                });
+        }
+    </script>
+</head>
+<body>
+    <div class="container chat-container">
+        <h1 class="text-center">Chatbot</h1>
+        <div class="messages-container" id="messages"></div>
+        <div class="message-box">
+            <input type="text" id="message" class="form-control message-input" placeholder="Type your message here">
+            <button class="btn btn-primary ml-2" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
