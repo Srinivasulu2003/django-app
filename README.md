@@ -99,21 +99,13 @@ chatbot_project/
                   # Text file
 ```
 
-## Contributing
 
-If you would like to contribute to this project, please fork the repository, create a new branch, and submit a pull request. Ensure that your code adheres to the project's coding standards and includes relevant tests.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
 - [LangChain](https://www.langchain.com)
 - [Cohere](https://cohere.ai)
 - [HuggingFace](https://huggingface.co)
-- ![Uploading image.png…]()
 
-
-```
 
