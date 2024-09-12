@@ -69,6 +69,7 @@ This project is a Django-based chatbot application that uses a Retrieval-Augment
 2. **Upload a PDF**: Use the file input to upload a PDF. The chatbot will extract the text and use it to answer your queries.
 
 ## Directory Structure
+![image](https://github.com/user-attachments/assets/0264e32d-a428-401b-a4f7-67ee9f42ea02)
 
 ```
 chatbot_project/
@@ -111,6 +112,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [LangChain](https://www.langchain.com)
 - [Cohere](https://cohere.ai)
 - [HuggingFace](https://huggingface.co)
+- ![Uploading image.png…]()
+
 
 ```
 
